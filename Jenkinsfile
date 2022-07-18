@@ -23,7 +23,7 @@ pipeline {
         stage('Deploy') {
             steps{
                withCredentials([string(credentialsId: 'dockerhubpass', variable: 'jgb')]) {
-                    sh "docker login -u jerrygb7 -p ${dockhubpass}"
+                    sh "docker login -u jerrygb7 -p ${jgb}"
                 }                 
                 sh 'docker push jerrygb7/kubgroup:latest'
             }
