@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 // Get some code from a GitHub repository
-                git 'https://github.com/2206-devops-batch/AJNJ-project2.git'
+                git 'https://github.com/JerryGB7/AJNJ-project2.git'
 
                 // Build a docker tag
                 sh 'docker build -t kubgroup/p1_kubgroup:latest .'
@@ -37,9 +37,9 @@ pipeline {
         }
     }
     
-    post {
-        always{
-            discordSend description: '', enableArtifactsList: true, footer: '', image: '', link: 'http://ec2-35-175-147-59.compute-1.amazonaws.com:8080/', result: currentBuild.currentResult, scmWebUrl: '', showChangeset: true, thumbnail: '', title: 'KubBot 2.0', webhookURL: 'https://discord.com/api/webhooks/994670791381766194/1puwuCYH5ZoyNrxHo8CMgPx8lDhfI7YWWV2BbR78hY04QYxR9SShZuZehj1hezwpHOt5'
-        }
-    }
+//     post {
+//         always{
+//             discordSend description: '', enableArtifactsList: true, footer: '', image: '', link: 'http://ec2-35-175-147-59.compute-1.amazonaws.com:8080/', result: currentBuild.currentResult, scmWebUrl: '', showChangeset: true, thumbnail: '', title: 'KubBot 2.0', webhookURL: 'https://discord.com/api/webhooks/994670791381766194/1puwuCYH5ZoyNrxHo8CMgPx8lDhfI7YWWV2BbR78hY04QYxR9SShZuZehj1hezwpHOt5'
+//         }
+//     }
 }
