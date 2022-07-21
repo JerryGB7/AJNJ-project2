@@ -8,7 +8,7 @@ pipeline {
                 git 'https://github.com/JerryGB7/AJNJ-project2.git'
 
                 // Build a docker tag
-                sh 'docker build -t kubgroup/p1_kubgroup:latest .'
+                sh 'docker build -t jerrygb7/kubgroup:latest .'
                 
                 sh 'python3 -m pip install -r requirements.txt'
                 
